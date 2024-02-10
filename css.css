@@ -16,6 +16,9 @@ a{
 html{
   scroll-behavior: smooth;
 }
+.cont{
+  background-color: #f6f6f6;
+}
 main {
   display: flex;
   align-items: center;
@@ -175,6 +178,9 @@ main .image img {
   font-size: 18px;
 }
 @media (min-width:1375px) {
+  .bio .top p{
+    margin-left: 350px;
+  }
   .bio .top h3{
     margin: auto;
     font-size: 50px;
@@ -248,6 +254,7 @@ main .image img {
 }
 .three .image{
   width: 30%;
+  margin-right: 110px;
 }
 .three .image img{
   max-width: 100%;
@@ -447,6 +454,15 @@ height: 600px;
   .fife .image img{
     max-width: 100%;
   }
+  
+}
+@media (min-width:1375px) {
+  .fife .text{
+    margin-left: 150px;
+  }
+  .fife .image{
+    margin-right: 200px;
+  }
 }
 .six{
   margin-top: 30px;
@@ -482,6 +498,16 @@ height: 600px;
   .six p{
     width: 100%;
   }
+}
+@media (min-width:1375px) {
+  .six{
+    margin-left: 150px;
+    padding: 10px 0px;
+  }
+  .six .image img{
+    width: 1500px;
+  }
+
 }
 @media (max-width:450px) {
   .six{
@@ -532,8 +558,8 @@ height: 600px;
 }
 .seven .image .imgg img{
   max-width: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   margin-left: 25%;
   margin-right: 25%;
 }
@@ -620,6 +646,11 @@ height: 600px;
     max-width: 100%;
   }
 }
+@media (min-width:1375px) {
+  .eigth .text{
+    padding: 400px 0px;
+  }
+}
 @media (max-width:900px) {
   .eigth .text{
   width: 80%;
@@ -632,7 +663,7 @@ height: 600px;
   }
 }
 .nine{
-  padding: 100px 50px;
+  padding: 100px 0px;
 }
 .nine h1{
   font-size: 50px;
@@ -691,6 +722,44 @@ height: 600px;
   font-size: 20px;
   font-weight: 300;
   font-family: cursive;
+}
+@media (min-width:1375px) {
+  .nine{
+    margin-left: 150px;
+  }
+  .nine .h1{
+    margin-left: 150px;
+  }
+  .nine .image{
+    width: 40%;
+  }
+  .nine .contant{
+    justify-content: center;
+  }
+  .nine .text{
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  .nine .image img{
+    max-height: 325px;
+    max-width: 500px;
+  }
+  .nine .text .top h1{
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .nine .text .middle p{
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+  .nine .text .bottom p{
+    font-size: 21px;
+  }
+  .nine .text .bottom h1{
+    font-size: 22px;
+    font-weight: 500;
+  }
 }
 @media (max-width:1025px) {
   .nine .contant{
