@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 a{
   text-decoration: none;
@@ -13,8 +14,70 @@ a{
   src: url('./webfonts_Anders/Anders.ttf.woff') format('woff');
   /* Add more font formats if needed */
 }
+
 html{
   scroll-behavior: smooth;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  height: 30px;
+}
+header .navbar ul li{
+  position: relative;
+  float: left;
+}
+header .navbar ul li a{
+  display: block;
+  font-size: 20px;
+  padding: 20px;
+  color: hsla(210, 26%, 7%, 0.7);
+}
+header .navbar ul li a:hover{
+  color: black;
+}
+#menu-bar{
+  display: none;
+}
+header label{
+  position: relative;
+  right: 10px;
+  top: 2px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width:540px) {
+  header label{
+    display: initial;
+  }
+  header .navbar{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    display: none;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  header .navbar ul{
+    height: 100vh;
+    background-color: white;
+    max-width: 80%;
+    float: right;
+    z-index: 2001;
+  }
+  header .navbar ul li{
+    width: 100%;
+  }
+  #menu-bar:checked ~ .navbar{
+    display: initial;
+  }
 }
 .cont{
   background-color: #f6f6f6;
@@ -26,6 +89,7 @@ main {
   /* max-height: 100vh; */
   background-color: #f6f6f6;
   overflow-y: hidden;
+  
 }
 
 main .text {
@@ -42,7 +106,7 @@ main .text .top {
 main .text .top p {
   text-transform: uppercase;
   letter-spacing: 0.09em;
-  font-family: sans-serif;
+  font-family: "Montserrat",sans-serif;
 }
 
 main .text .top h1 {
@@ -101,6 +165,16 @@ main .image img {
     max-width: 1375px;
     margin: auto;
   }
+  main .text .top p{
+    font-size: 25px;
+  }
+  main .text .top h1{
+    font-size: 150px;
+  }
+  main .text .top h4{
+    letter-spacing: 17px;
+    font-weight: 700;
+  }
 }
 @media (max-width:1025px) {
   main {
@@ -132,7 +206,7 @@ main .image img {
   }
 }
 .bio{
-  margin-top: 30px;
+  margin-top: 80px;
   padding: 15px 50px;
 }
 .bio .top{
@@ -148,12 +222,12 @@ main .image img {
   font-size: 20px;
 }
 .bio .top h3{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 30px;
   font-weight: normal;
+  font-family: "Bogart",sans-serif;
 }
 .bio .under-bio {
-  margin-top: 90px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -168,25 +242,25 @@ main .image img {
   width: 50%;
   padding: 10px;
   padding-left: 20px;
-  font-family: sans-serif;
+  font-family: "Montserrat",sans-serif;
 }
 .bio .under-bio .text p{
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   line-height: 1.6;
   letter-spacing: 1px;
   color: rgb(99, 98, 98);
-  font-size: 18px;
+  font-size: 17px;
 }
 @media (min-width:1375px) {
-  .bio .top p{
-    margin-left: 350px;
+  .bio {
+    max-width: 1375px;
+    margin: 60px auto;
+  }
+  .bio .top{
+    margin: auto;
   }
   .bio .top h3{
-    margin: auto;
     font-size: 50px;
-  }
-  .bio .under-bio{
-    justify-content: center;
   }
   .bio .under-bio .image{
     width: 500px;
@@ -223,7 +297,7 @@ main .image img {
 .three .background h1,
 .three .expertise h1{
   letter-spacing: 1px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family:  "Bogart",sans-serif;
   font-weight: normal;
   margin-bottom: 30px;
 }
@@ -231,13 +305,14 @@ main .image img {
   font-size: 17px;
   letter-spacing: 1px;
   line-height: 1.6;
-  font-family: sans-serif;
+  font-family: "Montserrat",sans-serif;
   margin-bottom: 40px;
+  max-width: 90%;
 }
 .three .background h3{
-  
+  max-width: 90%;
   line-height: 1.6;
-  font-family: sans-serif;
+  font-family: "Montserrat",sans-serif;
   font-size: 17px;
 }
 .three .expertise{
@@ -254,10 +329,29 @@ main .image img {
 }
 .three .image{
   width: 30%;
-  margin-right: 110px;
+  padding-top: 100px;
+  align-self: flex-end;
 }
 .three .image img{
   max-width: 100%;
+}
+@media (min-width:1375px) {
+  .three{
+    max-width: 1375px;
+    margin: 50px auto;
+  }
+  .three .background{
+    padding-right: 15px;
+  }
+  .three .expertise{
+    padding-left: 25px;
+  }
+  .three .background p{
+    max-width: 350px;
+  }
+  .three .background h3{
+    max-width: 300px;
+  }
 }
 @media (max-width:1025px){
   .three{
@@ -305,6 +399,7 @@ main .image img {
   font-family: 500;
   font-family: sans-serif;
   padding: 15px 10px;
+  margin-left: 50px;
 }
 .work{
   display: flex;
@@ -316,23 +411,25 @@ width: 48%;
 height: 600px;
 }
 .work .our .image{
+  height: 400px;
   width: 100%;
 }
 .work .our .image img{
   max-width: 100%;
   width: 100%;
-  height: 400px;
+  max-height: 100%;
 }
 .work .our p{
+  margin-left: -15px;
   margin-top: 20px;
   margin-bottom: -15px;
   font-size: 50px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Bogart",sans-serif;
   text-transform: capitalize;
 }
 .work .our span{
   font-size: 50px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Bogart",sans-serif;
   text-transform: capitalize;
 }
 .work .info{
@@ -345,13 +442,17 @@ height: 600px;
 }
 .work .info p{
   margin-top: 20px;
-  font-family: sans-serif;
+  font-family: "Montserrat",sans-serif;
   font-size: 19px;
   letter-spacing: 2px;
   font-weight: normal;
   text-transform: capitalize;
 }
 @media (min-width:1375px) {
+  .four{
+    max-width: 1375px;
+    margin: 30px auto;
+  }
   .work{
     justify-content: center;
   }
@@ -368,10 +469,17 @@ height: 600px;
     max-width: calc(100% - 600px);
     margin-left: 10px;
   }
+  .work .info p{
+    max-width: 70%;
+    margin:20px auto; 
+  }
 }
 @media (max-width:1025px) {
   .work{
     flex-direction: column;
+  }
+  .work .our .image{
+    margin-bottom: 20px;
   }
   .work .our p{
     display: inline;
@@ -382,6 +490,19 @@ height: 600px;
   }
   .four p{
     text-align: left;
+  }
+}
+@media(max-width:600px){
+  .work{
+    
+    width: 90%;
+    margin: auto;
+  }
+  .work .our .image img{
+    height: 80%;
+  }
+  .work .info{
+    margin-bottom: 150px;
   }
 }
 .fife{
@@ -400,21 +521,21 @@ height: 600px;
 .fife .text h1{
   margin-top: 50px;
   font-size: 50px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Bogart",sans-serif;
   text-transform: capitalize;
-  font-weight: 300;
+  font-weight: 500
 }
 .fife .text h2{
   margin-top: -10px;
   font-size: 50px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Bogart",sans-serif;
   text-transform: capitalize;
-  font-weight: 300;
+  font-weight: 500;
 }
 .fife .text p{
   margin-top: 70px;
-  width: 70%;
-  font-family: sans-serif;
+  width: 50%;
+  font-family: "Montserrat",sans-serif;
   letter-spacing: 1.5px;
   color: #414040;
   line-height: 1.6;
@@ -457,12 +578,11 @@ height: 600px;
   
 }
 @media (min-width:1375px) {
-  .fife .text{
-    margin-left: 150px;
+  .fife{
+    max-width: 1375px;
+    margin: 10px auto;
   }
-  .fife .image{
-    margin-right: 200px;
-  }
+  
 }
 .six{
   margin-top: 30px;
@@ -484,8 +604,8 @@ height: 600px;
   color: black;
   line-height: 1.6;
   font-weight: normal;
-  font-family: system-ui;
-  margin-bottom: 20px;
+  font-family: "Montserrat",sans-serif;
+  margin-bottom: 30px;
 }
 .six .image {
   max-width: 100%;
@@ -501,8 +621,8 @@ height: 600px;
 }
 @media (min-width:1375px) {
   .six{
-    margin-left: 150px;
-    padding: 10px 0px;
+    max-width: 1375px;
+    margin: 10px auto;
   }
   .six .image img{
     width: 1500px;
@@ -535,7 +655,7 @@ height: 600px;
 }
 .seven .text p{
   margin-top: 30px;
-  max-width: 60%;
+  max-width: 55%;
   letter-spacing: 1px;
   line-height: 1.6;
   font-weight: normal;
@@ -564,12 +684,14 @@ height: 600px;
   margin-right: 25%;
 }
 @media (min-width:1375px) {
+  .seven{
+    max-width: 1375px;
+    margin: 10px auto;
+  }
   .seven .image{
     max-width: 450px;
   }
-  .seven{
-    justify-content: center;
-  }
+
 }
 @media (max-width:1025px) {
   .seven {
@@ -627,7 +749,7 @@ height: 600px;
   line-height: 1.6;
   letter-spacing: 1px;
   font-weight: normal;
-  font-family: cursive;
+  font-family: "Bogart",sans-serif;
 }
 .eigth .image{
   width: 50%;
@@ -647,8 +769,12 @@ height: 600px;
   }
 }
 @media (min-width:1375px) {
+  .eigth{
+    max-width: 1375px;
+    margin: 0 auto;
+  }
   .eigth .text{
-    padding: 400px 0px;
+    padding: 230px 0px;
   }
 }
 @media (max-width:900px) {
@@ -663,12 +789,11 @@ height: 600px;
   }
 }
 .nine{
-  padding: 100px 0px;
+  margin: 100px 50px;
 }
 .nine h1{
   font-size: 50px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-transform: capitalize;
+  font-family: "Bogart",sans-serif;
   font-weight: normal;
   letter-spacing: 1px;
   margin-bottom: 50px;
@@ -687,31 +812,32 @@ height: 600px;
 }
 .nine .text {
   align-self: flex-start;
-  max-width: 40%;
-  width: 40%;
-  padding: 10px;
+  max-width: 45%;
+  width: 45%;
 }
 .nine .text .top{
+  margin-top: 35px;
   margin-bottom: 25px;
 }
 .nine .text .top p{
   margin-bottom: 15px;
   letter-spacing: 1px;
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: "Montserrat",sans-serif;
   font-weight: normal;
 }
 .nine .text .top h1{
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 500;
 }
-.nine .text .middle{
-  margin-bottom: 25px;
-}
+
 .nine .text .middle p{
   margin-bottom: 15px;
   font-size: 19px;
-  font-family: sans-serif;
+  font-family: "Bogart",sans-serif;
+}
+.nine .text .bottom{
+  margin-top: 40px;
 }
 .nine .text .bottom p{
   margin-bottom: 15px;
@@ -720,41 +846,51 @@ height: 600px;
 }
 .nine .text .bottom h1{
   font-size: 20px;
-  font-weight: 300;
-  font-family: cursive;
+  font-weight: 500;
+  font-family: "Bogart",sans-serif;
 }
 @media (min-width:1375px) {
   .nine{
-    margin-left: 150px;
+    max-width: 1375px;
+    margin: 0 auto;
   }
-  .nine .h1{
-    margin-left: 150px;
-  }
+  
   .nine .image{
-    width: 40%;
+    width: 50%;
   }
-  .nine .contant{
-    justify-content: center;
-  }
+  
   .nine .text{
     margin-top: 50px;
     margin-left: 50px;
   }
   .nine .image img{
-    max-height: 325px;
-    max-width: 500px;
+    max-width: 660px;
+  }
+  .nine .text .top{
+    margin-top: -30px;
   }
   .nine .text .top h1{
-    font-weight: 500;
+    margin-top: 15px;
+    padding-top: 20px;
+    margin-bottom: 50px;
     font-size: 22px;
+  }
+  .nine .text .middle {
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
   .nine .text .middle p{
     font-size: 21px;
     letter-spacing: 1px;
     font-weight: 700;
+    margin-bottom: 25px;
+  }
+  .nine .text .bottom{
+    margin-top: 60px;
   }
   .nine .text .bottom p{
     font-size: 21px;
+    margin-bottom: 25px;
   }
   .nine .text .bottom h1{
     font-size: 22px;
@@ -768,10 +904,14 @@ height: 600px;
   .nine .image {
     width: 80%;
     max-width: 80%;
+    margin-bottom: 20px;
   }
   .nine .text {
-    width: 80%;
-    max-width: 80%;
+    width: 60%;
+    max-width: 60%;
     margin: auto;
   }
+}
+@media (max-width:460px) {
+  
 }
