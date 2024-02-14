@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  list-style: none;
+  
 }
 a{
   text-decoration: none;
@@ -26,7 +26,12 @@ header{
   top: 0;
   z-index: 1000;
   background-color: white;
-  height: 30px;
+  height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  font-family: "Montserrat",sans-serif;
+}
+header .navbar ul{
+  list-style: none;
 }
 header .navbar ul li{
   position: relative;
@@ -34,9 +39,10 @@ header .navbar ul li{
 }
 header .navbar ul li a{
   display: block;
-  font-size: 20px;
-  padding: 20px;
+  font-size: 15px;
+  padding: 10px;
   color: hsla(210, 26%, 7%, 0.7);
+  font-weight: 700;
 }
 header .navbar ul li a:hover{
   color: black;
@@ -97,7 +103,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* max-height: 100vh; */
+  max-height: 100vh;
   background-color: #f6f6f6;
   overflow-y: hidden;
   
@@ -266,15 +272,24 @@ main .image img {
   .bio {
     max-width: 1375px;
     margin: 60px auto;
+    margin-bottom: 150px;
   }
   .bio .top{
     margin: auto;
+  }
+  .bio .top p{
+    font-weight: 500;
+    font-size: 22px;
   }
   .bio .top h3{
     font-size: 50px;
   }
   .bio .under-bio .image{
     width: 500px;
+  }
+  .bio .under-bio .text p{
+    font-size: 21px;
+    font-weight: 500;
   }
 }
 @media (max-width:1025px) {
@@ -335,7 +350,7 @@ main .image img {
 .three .expertise li p{
   color: #414040;
   font-size: 17px;
-  font-family: sans-serif;
+  font-family: "Montserrat",sans-serif;
   letter-spacing: 1px;
 }
 .three .image{
@@ -348,20 +363,34 @@ main .image img {
 }
 @media (min-width:1375px) {
   .three{
+    margin-top: 90px;
     max-width: 1375px;
     margin: 50px auto;
   }
-  .three .background{
-    padding-right: 15px;
-  }
+  .three .background h1,
+.three .expertise h1{
+  font-size: 45px;
+}
   .three .expertise{
     padding-left: 25px;
   }
   .three .background p{
-    max-width: 350px;
+    max-width: 410px;
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 90px;
   }
   .three .background h3{
-    max-width: 300px;
+    max-width: 350px;
+    font-size: 20px;
+  }
+  .three .expertise li {
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  .three .expertise li p{
+    font-weight: 500;
+    font-size: 22px;
   }
 }
 @media (max-width:1025px){
@@ -463,6 +492,10 @@ height: 600px;
   .four{
     max-width: 1375px;
     margin: 30px auto;
+    margin-bottom: 90px;
+  }
+  .four p{
+    margin-bottom: 25px;
   }
   .work{
     justify-content: center;
@@ -481,8 +514,17 @@ height: 600px;
     margin-left: 10px;
   }
   .work .info p{
-    max-width: 70%;
+    max-width: 90%;
     margin:20px auto; 
+    font-weight: 500;
+    line-height: 2;
+    font-size: 20px;
+  }
+  .work .our p{
+    font-size: 70px;
+  }
+  .work .our span{
+    font-size: 70px;
   }
 }
 @media (max-width:1025px) {
@@ -592,8 +634,17 @@ height: 600px;
   .fife{
     max-width: 1375px;
     margin: 10px auto;
+    margin-bottom: 60px;
   }
-  
+  .fife .text h1,.fife .text h2{
+    font-size: 70px;
+    font-weight: normal;
+  }
+  .fife .text p{
+    width: 66%;
+    font-size: 22px;
+    font-weight: 500;
+  }
 }
 .six{
   margin-top: 30px;
@@ -635,8 +686,21 @@ height: 600px;
     max-width: 1375px;
     margin: 10px auto;
   }
+  .six h1{
+    margin-bottom: 60px;
+    font-size: 70px;
+  }
+  .six p{
+    font-weight: 500;
+    width: 33%;
+    font-size: 22px;
+    margin-bottom: 70px;
+  }
   .six .image img{
     width: 1500px;
+  }
+  .six .image{
+    margin-bottom: 70px;
   }
 
 }
@@ -659,8 +723,7 @@ height: 600px;
 }
 .seven .text h1{
   font-size: 50px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-transform: capitalize;
+  font-family: "Bogart",sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
 }
@@ -698,6 +761,20 @@ height: 600px;
   .seven{
     max-width: 1375px;
     margin: 10px auto;
+    margin-top: 70px;
+  }
+  .seven .text{
+    margin-top: -100px;
+  }
+  .seven .text h1{
+    font-size: 75px;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+  .seven .text p{
+    font-size: 22px;
+    max-width: 70%;
+    font-weight: 500;
   }
   .seven .image{
     max-width: 450px;
@@ -783,9 +860,15 @@ height: 600px;
   .eigth{
     max-width: 1375px;
     margin: 0 auto;
+    margin-bottom: 70px;
   }
   .eigth .text{
-    padding: 230px 0px;
+    padding: 150px 0px;
+  }
+  .eigth .text p{
+    font-size: 50px;
+    max-width: 70%;
+    line-height: 1.4;
   }
 }
 @media (max-width:900px) {
@@ -865,7 +948,10 @@ height: 600px;
     max-width: 1375px;
     margin: 0 auto;
   }
-  
+  .nine h1{
+    margin-bottom: 120px;
+    font-size: 75px;
+  }
   .nine .image{
     width: 50%;
   }
