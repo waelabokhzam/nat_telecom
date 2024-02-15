@@ -659,7 +659,7 @@ height: 600px;
   font-size: 50px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-transform: capitalize;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 .six p{
@@ -728,7 +728,7 @@ height: 600px;
 .seven .text h1{
   font-size: 50px;
   font-family: "Bogart",sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 .seven .text p{
@@ -772,7 +772,7 @@ height: 600px;
   }
   .seven .text h1{
     font-size: 75px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 50px;
   }
   .seven .text p{
