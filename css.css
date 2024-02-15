@@ -196,6 +196,7 @@ main .image img {
 @media (max-width:1025px) {
   main {
     flex-direction: column;
+    max-height: 100%;
   }
 
   main .text {
