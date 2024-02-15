@@ -797,8 +797,12 @@ height: 600px;
     padding: 0;
     margin-bottom: 20px;
   }
+  .seven .text h1{
+    font-weight: 500;
+  }
   .seven .text p{
     max-width: 100%;
+    font-size: 20px;
   }
   .seven .image {
     margin: auto;
@@ -1004,7 +1008,9 @@ height: 600px;
   }
 }
 @media (max-width:1025px) {
+  
   .nine .contant{
+    margin-top: 150px;
     flex-direction: column;
   }
   .nine .image {
