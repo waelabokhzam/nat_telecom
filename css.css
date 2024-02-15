@@ -948,20 +948,25 @@ height: 600px;
     max-width: 1375px;
     margin: 0 auto;
   }
-  .nine h1{
+  .nine .h1{
     margin-bottom: 120px;
     font-size: 75px;
+    margin-left: 100px;
+  }
+  .eigth .contant{
+    
   }
   .nine .image{
     width: 50%;
   }
   
   .nine .text{
-    margin-top: 50px;
-    margin-left: 50px;
+    margin-top: 70px;
+    margin-left: 150px;
   }
   .nine .image img{
     max-width: 660px;
+    margin-left: 100px;
   }
   .nine .text .top{
     margin-top: -30px;
