@@ -213,6 +213,9 @@ main .image img {
 }
 
 @media (max-width:600px) {
+  main{
+    max-height: 100%;
+  }
   main .text .bottom {
     flex-direction: column;
     text-align: center;
