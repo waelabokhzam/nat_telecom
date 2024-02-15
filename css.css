@@ -913,13 +913,14 @@ height: 600px;
   max-width: 100%;
 }
 .nine .text {
+  position: relative;
   align-self: flex-start;
   max-width: 45%;
   width: 45%;
 }
 .nine .text .top{
-  margin-top: 35px;
-  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-bottom: 80px;
 }
 .nine .text .top p{
   margin-bottom: 15px;
@@ -932,7 +933,9 @@ height: 600px;
   font-size: 20px;
   font-weight: 500;
 }
-
+.nine .text .middle{
+  margin-bottom: 70px;
+}
 .nine .text .middle p{
   margin-bottom: 15px;
   font-size: 19px;
@@ -1024,6 +1027,11 @@ height: 600px;
     margin: auto;
   }
 }
-@media (max-width:460px) {
-  
+@media (max-width:1200px) and (min-width:1026px) {
+  .nine .text .middle{
+    margin-bottom: 0;
+  }
+  .nine .text .top{
+    margin-bottom: 0;
+  }
 }
